@@ -50,7 +50,7 @@ namespace forditoprog
             string input = kifejezes.Text;
             int index = 0;
             richTextBox1.Text += input + "\n";
-            input = Regex.Replace(input, "[0-9]+", "i");
+            input = Regex.Replace(input, "[0-9]+", "i"); //Számokat lecserélem a szabálytáblázatnak megfelelő karakterekre.
             if (checkInputLastChar(input)) input += "#";
             kifejezes.Text = input;
 
@@ -66,7 +66,13 @@ namespace forditoprog
 
                 switch (table[tableX, tableY])
                 {
-
+                    /*
+                     * Ha a cella üres, az azt jelenti, hogy a kifejezésben hibát találtunk. 
+                     * Ha a cella az elfogad szót tartalmazza, akkor a végére értünk az elemzésnek, és a kifejezés helyes.
+                     * 
+                     * Ha a pop szó található a cellában, akkor el kell távolítani a verem tetején található elemet (egy karaktert, ami lehet terminális, vagy nemterminális jel),
+                     * és az indexet léptetni kell, vagyis megnövelni az index változó értékét eggyel.
+                     */
                     case "":
                         state = "hiba";
                         break;
@@ -92,7 +98,7 @@ namespace forditoprog
                             output += karakterek[1];
                             for (int i = szabaly.Length - 1; i >= 0; i--)
                             {
-                                if (szabaly[i] == 'e')
+                                if (szabaly[i] == 'e') // Nem teszek semmit
                                 {
                                 }
                                 else if (szabaly[i] == '\'')
@@ -133,7 +139,10 @@ namespace forditoprog
         {
             richTextBox1.Text = "";
         }
-
+        /// <summary>
+        /// Beállítom a tábla alapbeállítását.
+        /// </summary>
+        /// <returns>string[,] alapbeállítás</returns>
         private string[,] returnDefaultTable()
         {
             return new string[,]
@@ -183,6 +192,11 @@ namespace forditoprog
                 },
             };
         }
+        /// <summary>
+        /// Kezdőállapotba helyezi az általunk használt változókat.
+        /// És inicializálja a stacket.
+        /// (tableY,tableX,x,y,state,output,rtb.text)
+        /// </summary>
         private void Initialize()
         {
             tableY = 0;
@@ -196,6 +210,11 @@ namespace forditoprog
             stack.Push("#");
             stack.Push("E");
         }
+        /// <summary>
+        /// Megnézi az input utolsó karakterét, hogy elfogadó állapotban vagyunk-e.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns> true, ha elfogadó állapot, false ha nem.</returns>
         private bool checkInputLastChar(string input)
         {
             return input.Last<char>() != '#';
@@ -267,62 +286,6 @@ namespace forditoprog
                     break;
                 default:
                     break;
-            }
-        }
-
-        private void switchTable(string[,] table, string input, int tableX, int tableY, int index)
-        {
-            switch (table[tableX, tableY])
-            {
-
-                case "":
-                    state = "hiba";
-                    break;
-                case "elfogad":
-                    state = "Sikeres";
-                    break;
-                case "pop":
-                    if (index + 1 <= input.Length) index++;
-                    richTextBox1.Text += string.Format("({0}, ", input.Remove(0, index));
-                    foreach (var item in stack)
-                    {
-                        richTextBox1.Text += string.Format("{0}", item);
-                    }
-                    richTextBox1.Text += string.Format(", {0})\n", output);
-                    break;
-                default:
-                    try
-                    {
-                        string[] karakterek = table[tableX, tableY].Split(',');
-                        karakterek[0] = karakterek[0].Remove(0, 1);
-                        karakterek[1] = karakterek[1].Remove(1, 1);
-                        char[] szabaly = karakterek[0].ToArray();
-                        output += karakterek[1];
-                        for (int i = szabaly.Length - 1; i >= 0; i--)
-                        {
-                            if (szabaly[i] == 'e')
-                            {
-                            }
-                            else if (szabaly[i] == '\'')
-                            {
-                                stack.Push(szabaly[i - 1].ToString() + szabaly[i].ToString());
-                                i--;
-                            }
-                            else stack.Push(szabaly[i]);
-                        }
-                        richTextBox1.Text += string.Format("({0}, ", input.Remove(0, index));
-                        foreach (var item in stack)
-                        {
-                            richTextBox1.Text += string.Format("{0}", item);
-                        }
-                        richTextBox1.Text += string.Format(", {0})\n", output);
-                        break;
-                    }
-                    catch (Exception)
-                    {
-                        state = "Error";
-                        break;
-                    }
             }
         }
     }

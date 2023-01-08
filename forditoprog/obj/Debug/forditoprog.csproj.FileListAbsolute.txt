@@ -21,3 +21,15 @@ D:\Repositories\Fordítóprog\forditoprog\forditoprog\obj\Debug\forditoprog.cspr
 D:\Repositories\Fordítóprog\forditoprog\forditoprog\obj\Debug\forditoprog.csproj.CoreCompileInputs.cache
 D:\Repositories\Fordítóprog\forditoprog\forditoprog\obj\Debug\forditoprog.exe
 D:\Repositories\Fordítóprog\forditoprog\forditoprog\obj\Debug\forditoprog.pdb
+C:\Users\kardy\Desktop\Projects\Fordítóprogramok beadandó\fordprog_beadando\forditoprog\bin\Debug\forditoprog.exe.config
+C:\Users\kardy\Desktop\Projects\Fordítóprogramok beadandó\fordprog_beadando\forditoprog\bin\Debug\forditoprog.exe
+C:\Users\kardy\Desktop\Projects\Fordítóprogramok beadandó\fordprog_beadando\forditoprog\bin\Debug\forditoprog.pdb
+C:\Users\kardy\Desktop\Projects\Fordítóprogramok beadandó\fordprog_beadando\forditoprog\obj\Debug\forditoprog.csproj.AssemblyReference.cache
+C:\Users\kardy\Desktop\Projects\Fordítóprogramok beadandó\fordprog_beadando\forditoprog\obj\Debug\forditoprog.csproj.SuggestedBindingRedirects.cache
+C:\Users\kardy\Desktop\Projects\Fordítóprogramok beadandó\fordprog_beadando\forditoprog\obj\Debug\forditoprog.Form1.resources
+C:\Users\kardy\Desktop\Projects\Fordítóprogramok beadandó\fordprog_beadando\forditoprog\obj\Debug\forditoprog.Form2.resources
+C:\Users\kardy\Desktop\Projects\Fordítóprogramok beadandó\fordprog_beadando\forditoprog\obj\Debug\forditoprog.Properties.Resources.resources
+C:\Users\kardy\Desktop\Projects\Fordítóprogramok beadandó\fordprog_beadando\forditoprog\obj\Debug\forditoprog.csproj.GenerateResource.cache
+C:\Users\kardy\Desktop\Projects\Fordítóprogramok beadandó\fordprog_beadando\forditoprog\obj\Debug\forditoprog.csproj.CoreCompileInputs.cache
+C:\Users\kardy\Desktop\Projects\Fordítóprogramok beadandó\fordprog_beadando\forditoprog\obj\Debug\forditoprog.exe
+C:\Users\kardy\Desktop\Projects\Fordítóprogramok beadandó\fordprog_beadando\forditoprog\obj\Debug\forditoprog.pdb
