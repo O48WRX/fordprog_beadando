@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label3 = new System.Windows.Forms.Label();
             this.kifejezes = new System.Windows.Forms.TextBox();
             this.accept = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.deleteOutput = new System.Windows.Forms.Button();
+            this.helpbox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // label3
@@ -52,7 +54,7 @@
             // 
             this.kifejezes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kifejezes.Location = new System.Drawing.Point(102, 30);
-            this.kifejezes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kifejezes.Margin = new System.Windows.Forms.Padding(2);
             this.kifejezes.Name = "kifejezes";
             this.kifejezes.Size = new System.Drawing.Size(168, 29);
             this.kifejezes.TabIndex = 5;
@@ -62,7 +64,7 @@
             this.accept.BackColor = System.Drawing.Color.Red;
             this.accept.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.accept.Location = new System.Drawing.Point(141, 72);
-            this.accept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.accept.Margin = new System.Windows.Forms.Padding(2);
             this.accept.Name = "accept";
             this.accept.Size = new System.Drawing.Size(87, 30);
             this.accept.TabIndex = 8;
@@ -74,7 +76,7 @@
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.richTextBox1.Location = new System.Drawing.Point(274, 30);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(317, 331);
@@ -85,7 +87,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.Location = new System.Drawing.Point(389, 370);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 28);
             this.button1.TabIndex = 10;
@@ -106,19 +108,28 @@
             this.deleteOutput.UseVisualStyleBackColor = false;
             this.deleteOutput.Click += new System.EventHandler(this.deleteOutput_Click);
             // 
+            // helpbox1
+            // 
+            this.helpbox1.Location = new System.Drawing.Point(6, 172);
+            this.helpbox1.Name = "helpbox1";
+            this.helpbox1.Size = new System.Drawing.Size(263, 189);
+            this.helpbox1.TabIndex = 12;
+            this.helpbox1.Text = resources.GetString("helpbox1.Text");
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Firebrick;
             this.ClientSize = new System.Drawing.Size(600, 407);
+            this.Controls.Add(this.helpbox1);
             this.Controls.Add(this.deleteOutput);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.accept);
             this.Controls.Add(this.kifejezes);
             this.Controls.Add(this.label3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -134,6 +145,7 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button deleteOutput;
+        private System.Windows.Forms.RichTextBox helpbox1;
     }
 }
 

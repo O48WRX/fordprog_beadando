@@ -34,8 +34,8 @@ namespace forditoprog
         public Form1()
         {
             this.Text = "Beadandó";
-
             InitializeComponent();
+            helpbox1.ReadOnly = true;
             table = returnDefaultTable();
         }
 
